@@ -1,0 +1,473 @@
+:root {
+    --accent-1: #1debcc;
+    --font-1: 'Nunito', sans-serif;
+    --font-2: 'Montserrat', sans-serif;
+}
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(90deg, #231f20, #1b191c);
+}
+
+
+/*main styles */
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Navbar styles*/
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(90deg, #231f20, #1b191c);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.navbar li {
+    list-style: none;
+    letter-spacing: 2px;
+    
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    opacity: 70%;
+    font-family: var(--font-1);
+    font-size: 14px;
+}
+
+.navbar a:hover {
+    color: #1debcc;
+    animation: colorChange 0,5s forwards;
+}
+
+@keyframes colorChange {
+    from {
+      color: #fff; /* Starting color */
+    }
+    to {
+      color: #1debcc; /* Ending color */
+    }
+  }
+
+.navbar img {
+    width: 80px;
+}
+
+
+/*hero section styles*/
+
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-top: 150px;
+}
+
+.hero-text {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.hero-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    opacity: 70%;
+    margin-bottom: 60px;
+}
+
+
+
+/*contact us button within navbar*/
+.contact-us-nav {
+    background: transparent;
+    border: 2px solid #1debcc;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    display: flex; /* Center the text */
+    align-items: center; /* Center the text vertically */
+    justify-content: center; /* Center the text horizontally */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    position: relative; /* Required for pseudo-elements */
+}
+
+.contact-us-nav p {
+    color: #1debcc;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin: 0; /* Remove default margin */
+    transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+.contact-us-nav:hover {
+    background-color: #1debcc;
+}
+
+.contact-us-nav:hover p {
+    color: #fff; /* Change text color on hover */
+}
+
+/* contact us button within hero section*/
+
+.contact-us-hero {
+    background: #1debcc;
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.contact-us-hero p {
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.contact-us-hero:hover {
+    background: transparent;
+    border:  2px solid #1debcc;  
+    transition: background 0.3s ease-in;
+
+}
+
+.contact-us-hero:hover p {
+    color: #1debcc;
+    transition: color 0.3s ease-in;
+}
+
+
+
+
+
+
+/*why nexus sync is the best choice section */
+
+.bc-cards {
+    width: 90%;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 200px;
+    gap: 40px;
+}
+
+
+.bc-heading {
+    width: 60%;
+    color: #fff;
+    font-family: var(--font-1);
+    font-size: 50px;
+    text-align: center;
+    
+}
+
+.cards-1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.cards-2 {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.card {
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--accent-1);
+    border-radius: 20px;
+    text-align: center;
+    gap: 20px;
+}
+
+.card h6 {
+    color: #fff;
+    font-size: 12px;
+    font-family: var(--font-2);
+    width: 90%;
+}
+.card p{
+    color: #fff;
+    font-family: var(--font-2);
+    font-size: 10px;
+    width: 90%;
+}
+
+
+/*the serviices we provide section*/
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+}
+
+
+
+.services h2 {
+    width: 50%;
+    color: #fff;
+    font-family: var(--font-2);
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.services-container {
+    width: 80%;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.service-card h5 {
+    color: #fff;
+    font-family: var(--font-2);
+    font-size: 15px;
+}
+
+.service-card p {
+    color: #fff;
+    font-family: var(--font-2);
+    font-size: 13px;
+    width: 80%;
+    text-align: center;
+}
+
+
+
+
+
+
+/*portfolio section*/
+
+.portfolio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.portfolio h2 {
+    color: #fff;
+    font-family: var(--font-2);
+    font-size: 40px;
+}
+
+.portfolio-grid {
+   width: 80%; 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 50px;
+}
+
+.portfolio-grid-img{
+    width: 20%;
+    height: 200px;
+    padding: auto;
+    
+}
+
+.img-1 {
+    background-image: url("/assets/financeDash.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-2 {
+    background-image: url("/assets/fitnessApp.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-3 {
+    background-image: url("/assets/kansOrder.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+/*get in touch section styles */
+
+.details-form {
+    width: 80%;
+    padding: 100px;
+}
+
+
+.details-form h4 {
+    color: #fff;
+    font-size: 18px;
+    font-family: var(--font-1);
+    text-align: start;
+    padding: 50px;
+    letter-spacing: 2px;
+    opacity: 80%;
+}
+
+.details-form strong {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.form-left input {
+    background: transparent;
+    border: var(--accent-1) solid 1px;
+    border-radius: 5px;
+    height: 40px;
+    width: 320px;
+    padding: 5px;
+}
+
+.form-left input::placeholder {
+    padding-left: 10px;
+    letter-spacing: 2px;
+}
+
+.form-right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form-right h3 {
+    color: #fff;
+    font-family: var(--font-1);
+    font-size: 50px;
+}
+
+.form-right input{
+    background: #1debcc;
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    color: white;
+    font-family: var(--font-2);
+    font-size: 15px;
+}
+
+.form-right input:hover {
+    background: transparent;
+    border: #1debcc 2px solid;
+    transition: border 5s ease-in-out;
+    color: #1debcc;
+    cursor: pointer;
+}
+
+
+
+/*footer secction */
+
+footer {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+footer img {
+    width: 70px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    color: #fff;
+    font-size: 10px;
+    opacity: 50%;
+    font-family: var(--font-2);
+    margin-top: 20px;
+}
