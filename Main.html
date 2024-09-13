@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Main.css">
+    <link rel="stylesheet" href="/mediaQueries.css">
     <link rel="shortcut icon" href="./assets/Nexus-Favico.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -14,6 +15,19 @@
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+    <!--EmailJS link-->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init({
+            publicKey: "wad85GGKj1Q7gFYkT",
+          });
+       })();
+    </script>
     
     
     <title>Nexus Sync Solutions</title>
@@ -24,16 +38,20 @@
     <!----------------Navbar section---------------->
     <nav class="navbar">
         <img src="./assets/logo.png" alt="Logo image">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">About Us</a></li> 
+
+        
+
+        <!-- Navbar links -->
+        <ul class="navbar-menu">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#about-us">About Us</a></li> 
         </ul>
 
 
         <!--call to action button in navbar-->
-        <a href="#">
+        <a href="#contact-us">
             <button class="contact-us-nav">
                 <p>
                     Contact Us
@@ -44,7 +62,7 @@
 
     <main>
         <!--Hero section (the left side)-->
-        <div class="hero">
+        <div class="hero animate-on-scroll" id="hero">
             <div class="hero-text">
                 <h1 class="hero-title">BETTER  SOLUTIONS WITH NEXUS SYNC</h1>
                 <p class="hero-description">
@@ -52,29 +70,34 @@
                 </p>
 
                 <!--call to action button in hero section-->
-                <a href="#">
-                    <button class="contact-us-hero">
-                        <p>
-                            Contact Us
-                        </p>
-                    </button>
+                <a href="#contact-us" id="contact-us-hero">
+                    <div class="contact-us-hero-div">
+                        <button class="contact-us-hero">
+                            <p>
+                                Contact Us
+                            </p>
+                        </button>
+                    </div>
                 </a>
             </div>
 
             <!--Hero section (the right side)-->
-            <div class="hero-image"><img src="./assets/hero-img.png" alt="Hero image"></div>
+            <div class="hero-image">
+                <img src="./assets/hero-img.png" alt="Hero image" class="hero-img"></div>
         </div>
 
 
 
         <!-----------------why nexus sync is the best choice? section-------------------->
-        <div class="bc-cards">
-            <h2 class="bc-heading">
+        <div class="bc-cards animate-on-scroll" id="about-us">
+            <h2 class="bc-heading" id="bc-heading">
                 Why Nexus Sync Is The Best Choice?
             </h2>
             <div class="cards-1">
                 <div class="card">
-                    <!--icon-->
+                    <div class="icon icon-1">
+                        <img src="/icons/diverse-service.png" alt="" height="70px" width="70px">
+                    </div>
                     <h6>Expertise in Diverse Services</h6>
                     <p>
                         Nexus Sync Solutions offers a comprehensive suite of services, including web development, UI/UX design, and graphic design. Our team of skilled professionals ensures that all aspects of your online presence are cohesively developed and visually appealing.
@@ -82,7 +105,9 @@
                 </div>
 
                 <div class="card">
-                    <!--icon-->
+                    <div class="icon icon-2">
+                        <img src="/icons/tailored-solution.png" alt="" height="70px" width="70px">
+                    </div>
                     <h6>Tailored Solutions</h6>
                     <p>
                         We recognize that every business is unique. Our approach is to create customized solutions that reflect your brand identity and meet your specific goals. Whether it's a dynamic website, a user-friendly interface, or captivating graphics, we deliver bespoke services that set you apart.                    
@@ -90,7 +115,9 @@
                 </div>
 
                 <div class="card">
-                    <!--icon-->
+                    <div class="icon icon-3">
+                        <img src="/icons/cutting-edge.png" alt="" height="70px" width="70px">
+                    </div>
                     <h6> Cutting-Edge Technology and Design</h6>
                     <p>
                         We stay ahead of the curve by utilizing the latest technologies and design trends. This ensures your website is not only aesthetically pleasing but also functional, responsive, and optimized for performance across all devices.
@@ -98,7 +125,9 @@
                 </div>
 
                 <div class="card">
-                    <!--icon-->
+                    <div class="icon icon-4">
+                        <img src="/icons/comprehensive.png" alt="" height="70px" width="70px" style="margin-bottom: -10px;">
+                    </div>
                     <h6>Comprehensive and Integrated Approach</h6>
                     <p>
                         Our expertise spans across web development, UI/UX design, and graphic design, allowing us to provide an integrated approach to your digital needs. This ensures consistency and quality across your entire online presence, from the functionality of your website to the visual impact of your graphics.
@@ -108,21 +137,27 @@
 
             <div class="cards-2">
                 <div class="card">
-                    <!--icon-->
+                    <div class="icon icon-5">
+                        <img src="/icons/competitive.png" alt="" height="70px" width="70px">
+                    </div>
                     <h6>Competitive and Transparent Pricing</h6>
                     <p>
                         We offer top-tier services at competitive rates, ensuring you get the best value for your investment. Our transparent pricing model means no hidden costs, allowing you to plan your budget with confidence.
                     </p>
                 </div>
                 <div class="card">
-                    <!--icon-->
+                    <div class="icon icon-6">
+                        <img src="/icons/customer-support.png" alt="" height="70px" width="70px">
+                    </div>
                     <h6>Dedicated Customer Support</h6>
                     <p>
                         At Nexus Sync Solutions, customer satisfaction is our priority. We provide ongoing support and maintenance, ensuring that your website and design elements continue to perform optimally and evolve with your business needs.
                     </p>
                 </div>
                 <div class="card">
-                    <!--icon-->
+                    <div class="icon icon-7">
+                        <img src="/icons/success.png" alt="" height="70px" width="70px">
+                    </div>
                     <h6>Proven Success</h6>
                     <p>
                         Our portfolio showcases successful projects and satisfied clients, demonstrating our ability to deliver high-quality results. We have a proven track record of helping businesses enhance their online presence and achieve their digital objectives.
@@ -133,23 +168,29 @@
 
 
         <!--------------the services we provide section------------------->
-        <section class="services">
-            <h2>The Services We Provide For You</h2>
-            <div class="services-container">
-                <div class="service-card">
-                    <!--icon-->
+        <section class="services animate-on-scroll" id="services">
+            <h2 id="services-heading">The Services We Provide For You</h2>
+            <div class="services-container" id="services-container">
+                <div class="service-card" id="service-card">
+                    <div class="icon service-icon">
+                        <img src="/icons/developer.png" alt="" height="50px" width="50px">
+                    </div>
                     <h5>Development</h5>
                     <p>Create a platform with the best and coolest quality from us.</p>
                 </div>
 
-                <div class="service-card">
-                    <!--icon-->
+                <div class="service-card" id="service-card">
+                    <div class="icon service-icon">
+                        <img src="/icons/ux.png" alt="" height="50px" width="50px">
+                    </div>
                     <h5>UI/UX Design</h5>
                     <p>We provide UI/UX Design services, and of course with the best quality.</p>
                 </div>
 
-                <div class="service-card">
-                    <!--icon-->
+                <div class="service-card" id="service-card">
+                    <div class="icon service-icon">
+                        <img src="/icons/ui-design.png" alt="" height="50px" width="50px">
+                    </div>
                     <h5>Graphic Design</h5>
                     <p>We provide Graphic Design services with the best designers.</p>
                 </div>
@@ -158,40 +199,119 @@
 
 
         <!----------------Portfolio section-------------------->
-        
-        
+        <section id="portfolio" class="portfolio-section animate-on-scroll">
+            <div class="container swiper" id="portfolio-container">
+                <div class="portfolio-heading">
+                    <h2>Our Awsome Portfolio</h2>
+                </div>
+                <div class="slider-wrapper swiper-container">
+                    <div class="card-list swiper-wrapper">
+
+                        <div class="card-item swiper-slide">
+                            <img src="./assets/financeDash.png" alt="Project 1" class="project-image">
+                            <h2 class="project-name">Finance Dashboard</h2>
+                            <p class="project-description">
+                                A streamlined interface for real-time financial tracking, including budgets, expenses, and investments.
+                            </p>
+                        </div>
+                        
+                        <div class="card-item swiper-slide">
+                            <img src="./assets/fitnessApp.png" alt="Project 2" class="project-image">
+                            <h2 class="project-name">Fitness Website</h2>
+                            <p class="project-description">An intuitive interface for tracking workouts, monitoring progress, and setting fitness goals with real-time updates and interactive charts.</p>
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="./assets/kansOrder.png" alt="Project 3" class="project-image">
+                            <h2 class="project-name">Restaurant Web App</h2>
+                            <p class="project-description">A streamlined interface for managing menus, tracking orders, and handling reservations, designed to optimize restaurant operations.</p>
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="./assets/ecommerce.png" alt="Project 3" class="project-image">
+                            <h2 class="project-name">E-commerce Website</h2>
+                            <p class="project-description">An intuitive interface for managing products, tracking sales, and analyzing customer data, designed to streamline online store operations.</p>
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="./assets/landingpage.png" alt="Project 3" class="project-image">
+                            <h2 class="project-name">Festival Landing Page</h2>
+                            <p class="project-description">An engaging interface for showcasing event details, ticket options, and schedules, designed to enhance the festival experience</p>
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="./assets/onlineforum.png" alt="Project 3" class="project-image">
+                            <h2 class="project-name">Online Forum</h2>
+                            <p class="project-description">A simple platform for managing discussions, user posts, and community engagement, built for easy interaction and moderation.</p>
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="./assets/travel website.png" alt="Project 3" class="project-image">
+                            <h2 class="project-name">Travel Website</h2>
+                            <p class="project-description">A user-friendly interface for exploring destinations, booking trips, and managing itineraries, designed to simplify travel planning.</p>
+                        </div>
+
+                        <div class="card-item swiper-slide">
+                            <img src="./assets/blog.png" alt="Project 3" class="project-image">
+                            <h2 class="project-name">Blog Post Website</h2>
+                            <p class="project-description">A clean interface for creating, managing, and organizing posts, designed to enhance content publishing and reader engagement.</p>
+                        </div>
+                        <!-- Add more cards as needed -->
+                    </div>
+
+                    <br />
+                    <br />
+                    <br />
+                    <div class="swiper-pagination"></div>
+                    
+                </div>
+            </div>
+        </section>
            
         
         
 
 
         <!----------------Get in touch section---------------->
-        <section class="details-form">
+        <section class="details-form animate-on-scroll" id="contact-us">
             <h4>Have any questions? <strong>Contact Our Team</strong>.</h4>
             <div class="form-container">
                 <div class="form-left">
-                    <form action="">
-                        <input type="text" placeholder="Firstname">
-                        <input type="text" placeholder="Lastname">
-                        <input type="text" placeholder="Contact">
-                        <input type="email" placeholder="Email">
+                    <form action="" id="contact-form">
+                        <input type="text" placeholder="Firstname" id="firstname" name="firstname" required>
+                        <input type="text" placeholder="Lastname" id="lastname" name="lastname" required>
+                        <input type="text" placeholder="Contact" id="contact" name="contact" required>
+                        <input type="email" placeholder="Email" id="email" name="email" required>
+                        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
                     </form>
                 </div>
                 <div class="form-right">
                     <h3>Get In Touch</h3>
-                    <!--icon-->
-                    <input type="submit" value="Contact us">
+                    <div class="icon form-icon">
+                        <img src="/icons/mail.png" height="80px" width="80px">
+                    </div>
+                    <input type="submit" value="Contact us" onclick="sendMail()">
                 </div>
             </div>
         </section>
-        <footer>
+
+        <!--footer section-->
+        <footer class="footer-bar">
             <img src="./assets/logo.png" alt="">
             <p>&copy; 2024 Nexus Sync All Rights Reserved.</p>
         </footer>
     </main>
 
-    <!-- Swiper JS -->
+
+
+    <!-- Swiper JS script-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/Main.js"></script>  
+
+
+
+    
+
+
 </body>
 </html>
