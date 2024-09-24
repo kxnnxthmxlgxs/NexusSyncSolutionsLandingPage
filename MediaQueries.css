@@ -246,6 +246,11 @@ body {
         
     }
 
+    /* Swiper pagination */
+    .swiper-pagination {
+        display: none;
+    }
+
 
     /* Get in touch section styles */
 
