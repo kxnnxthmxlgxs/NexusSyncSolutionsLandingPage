@@ -254,8 +254,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: auto;
-        margin-bottom: 20px;
+        
     }
 
     .form-container {
@@ -272,21 +271,34 @@ body {
     }
 
     .details-form strong {
-        font-size: px;
         opacity: 80%;
     }
 
     .form-right {
-        margin-top: -180px;
+        margin: -150px;
     }
 
 
      
     /*footer section */
     
-
+    .footer-bar {
+        width: 100%;
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 120px;
+        padding-bottom: 50px;
+    }
     
+    .footer-bar img {
+        margin: -400px;
+    }
     
+    .footer-bar p {
+        margin: -400px;
+    }
 }
 
 
