@@ -299,9 +299,7 @@ main {
     margin: 0 auto;
 }
 
-.slider-wrapper {
-    position: relative;
-}
+
 
 .portfolio-heading {
     font-size: 30px;
@@ -315,6 +313,8 @@ main {
 
 .card-list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -345,34 +345,6 @@ main {
     font-size: 14px;
     font-family: var(--font-2);
 }
-
-/* Swiper pagination */
-.swiper-pagination {
-    bottom: 20px; /* Position the dots lower */
-    text-align: center;
-}
-
-.swiper-pagination-bullet {
-    background: #1debcc; /* Accent color for active dot */
-    opacity: 0.7;
-    width: 12px; /* Size of the dots */
-    height: 12px; /* Size of the dots */
-    margin: 0 6px; /* Spacing between dots */
-    transition: background 0.3s, transform 0.3s; /* Smooth transition effects */
-}
-
-.swiper-pagination-bullet-active {
-    background: #fff; /* Color for the active dot */
-    transform: scale(1.2); /* Slightly larger active dot */
-}
-
-/* Hide Swiper buttons */
-.swiper-button-prev,
-.swiper-button-next {
-    display: none;
-}
-
-
 
 
 

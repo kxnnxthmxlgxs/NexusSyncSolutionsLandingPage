@@ -78,8 +78,8 @@ body {
         background: transparent;
         border: 2px solid #1debcc;
         border-radius: 5px;
-        width: 50px;
-        height: 20px;
+        width: 52px;
+        height: 22px;
         display: flex; /* Center the text */
         align-items: center; /* Center the text vertically */
         justify-content: center; /* Center the text horizontally */
