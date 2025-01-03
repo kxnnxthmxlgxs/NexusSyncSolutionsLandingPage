@@ -90,7 +90,7 @@ body {
     .contact-us-nav p {
         color: #1debcc;
         font-family: 'Nunito', sans-serif;
-        font-size: 5px;
+        font-size: 4px;
         letter-spacing: 1px;
         margin: 0; /* Remove default margin */
         transition: color 0.3s ease; /* Smooth text color transition */
